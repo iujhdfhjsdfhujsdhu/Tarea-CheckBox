@@ -11,9 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CheckBox cbCamion;
-    private CheckBox cbMoto;
-    private CheckBox cbCoche;
+    private CheckBox cbFresa;
+    private CheckBox cbManzana;
+    private CheckBox cbNaranja;
     private Button btnEnviar;
     private TextView tvSeleccion;
 
@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Inicializar componentes de UI
-        cbCamion = findViewById(R.id.cbCamion);
-        cbMoto = findViewById(R.id.cbMoto);
-        cbCoche = findViewById(R.id.cbCoche);
+        cbFresa = findViewById(R.id.cbFresa);
+        cbManzana = findViewById(R.id.cbNaranja);
+        cbNaranja = findViewById(R.id.cbManzana);
         btnEnviar = findViewById(R.id.btnEnviar);
         tvSeleccion = findViewById(R.id.tvSeleccion);
 
@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder vehiculosSeleccionados = new StringBuilder("Seleccionado: ");
 
         // Comprobar qué CheckBoxes están seleccionados
-        if (cbCamion.isChecked()) {
-            vehiculosSeleccionados.append("Camión, ");
+        if (cbFresa.isChecked()) {
+            vehiculosSeleccionados.append("Fresa, ");
         }
-        if (cbMoto.isChecked()) {
-            vehiculosSeleccionados.append("Moto, ");
+        if (cbManzana.isChecked()) {
+            vehiculosSeleccionados.append("Manzana, ");
         }
-        if (cbCoche.isChecked()) {
-            vehiculosSeleccionados.append("Coche, ");
+        if (cbNaranja.isChecked()) {
+            vehiculosSeleccionados.append("Naranja, ");
         }
 
         // Quitar la última coma y espacio si hay algún vehículo seleccionado
